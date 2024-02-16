@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(249, 253, 255, 0.848);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+li {
+    list-style-type: none;
+    color: rgb(47, 47, 47);
+    transition: transform 0.3s ease;
+    font-size: 1.3rem;
+}
+
+li:hover {
+    transform: scale(1.1);
+    color: rgb(112, 143, 13);
+}
+
+.activity-results__item-header {
+    font-size: 2.3rem;
+    margin-bottom: 2.2rem;
+}
+
+.activity-results__item-header:hover {
+    color: rgb(54, 70, 164);
+}
+
+#animals {
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    width: 100px;
+    height: auto;
+    animation: walk 35s linear infinite;
+    will-change: transform;
+}
+
+@keyframes walk {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+#wick {
+    position: absolute;
+    top: 0;
+    right: -100px; 
+    width: 100px;
+    height: auto;
+    animation: walkie 35s linear infinite;
+    margin-top: 0.5rem;
+    will-change: transform;
+}
+
+@keyframes walkie {
+    0% {
+        right: -100px; 
+    }
+
+    100% {
+        right: 100%; 
+    }
+}
+
+#animals:hover {
+    transform: scale(1.7) translateY(-15px);
+}
+
+#wick:hover {
+    transform: scale(1.3) translateY(30px) rotate(5deg);
+}
